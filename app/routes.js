@@ -2015,7 +2015,7 @@ router.post('/richer-claimant-info/v11/change-singular/additional-needs', functi
 
  router.post('/richer-claimant-info/v11/change-singular/behaviour', function(req, res) {
     
-  res.redirect('/richer-claimant-info/v11/pip-claimant-detail-updated-behaviour')
+  res.redirect('/richer-claimant-info/v11/pip-case-details-updated-behaviour')
  })
 
  router.post('/richer-claimant-info/v11/change-singular/mental-health', function(req, res) {
@@ -2036,6 +2036,44 @@ router.post('/richer-claimant-info/v11/change-singular/additional-needs', functi
  router.post('/richer-claimant-info/v11/change-singular/important-support', function(req, res) {
     
   res.redirect('/richer-claimant-info/v11/pip-case-details-updated-as')
+ })
+
+ //v11 routes - wca specific
+
+ router.post('/richer-claimant-info/v11/change-singular/wca/behaviour', function(req, res) {
+    
+  res.redirect('/richer-claimant-info/v11/wca-claimant-detail-updated-behaviour')
+ })
+
+ router.post('/richer-claimant-info/v11/change-singular/wca/consent-gp', function(req, res) {
+    
+  res.redirect('/richer-claimant-info/v11/wca-case-details-updated-consent')
+ })
+
+ router.post('/richer-claimant-info/v11/change-singular/wca/mental-health', function(req, res) {
+    
+  res.redirect('/richer-claimant-info/v11/wca-case-details-updated-mh')
+ })
+
+
+ router.post('/richer-claimant-info/v11/change-singular/wca/important-end-of-life', function(req, res) {
+    
+  res.redirect('/richer-claimant-info/v11/wca-case-details-updated-endoflife')
+ })
+
+ router.post('/richer-claimant-info/v11/change-singular/wca/interpreter', function(req, res) {
+    
+  res.redirect('/richer-claimant-info/v11/wca-claimant-detail-updated-interpreter')
+ })
+
+ router.post('/richer-claimant-info/v11/change-singular/wca/interpreter-remove', function(req, res) {
+    
+  res.redirect('/richer-claimant-info/v11/wca-claimant-detail-updated-interpreter-removed')
+ })
+
+ router.post('/richer-claimant-info/v11/change-singular/wca/personal-home-remove', function(req, res) {
+    
+  res.redirect('/richer-claimant-info/v11/wca-claimant-detail-updated-per')
  })
 
 
@@ -2135,10 +2173,12 @@ router.post('/richer-claimant-info/v9/corres4', function (req, res) {
 
 
 
+
 // v9.1 address Branching
 
 //scenario 1 
 router.post('/richer-claimant-info/v9-1/corres', function (req, res) {
+
   // Get the answer from session data
   // The name between the quotes is the same as the 'name' attribute on the input elements
   // However in JavaScript we can't use hyphens in variable names
